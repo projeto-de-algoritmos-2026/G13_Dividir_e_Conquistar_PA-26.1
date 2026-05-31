@@ -61,4 +61,4 @@ python monitoramento_veiculos.py.
 
 ## Saída
 
-![saida](image/)
+![saida](image/image.png)
