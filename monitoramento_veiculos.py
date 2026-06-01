@@ -3,11 +3,25 @@ from random import randint
 from math import sqrt
 
 # ==========================
+# CONTADORES
+# ==========================
+
+comparacoes_dividir_conquistar = 0
+
+# ==========================
 # ALGORITMO
 # ==========================
 
 def distancia(p1, p2):
+    global comparacoes_dividir_conquistar
+
+    comparacoes_dividir_conquistar += 1
+
     return sqrt((p1[0] - p2[0])**2 + (p1[1] - p2[1])**2)
+
+
+def total_comparacoes_forca_bruta(n):
+    return n * (n - 1) // 2
 
 
 def brute_force(points):
@@ -86,6 +100,10 @@ def closest_pair_recursive(px):
 
 
 def closest_pair(points):
+
+    global comparacoes_dividir_conquistar
+
+    comparacoes_dividir_conquistar = 0
 
     if len(points) < 2:
         return None
@@ -254,8 +272,14 @@ class App:
             tags="highlight"
         )
 
+        total_fb = total_comparacoes_forca_bruta(len(self.points))
+
         self.label.config(
-            text=f"Menor distância encontrada: {dist:.2f}"
+            text=(
+                f"Menor distância: {dist:.2f} | "
+                f"Dividir e Conquistar: {comparacoes_dividir_conquistar} comparações | "
+                f"Força Bruta: {total_fb} comparações"
+            )
         )
 
 
