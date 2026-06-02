@@ -5,7 +5,7 @@
 - Arthur Rodrigues Sousa (211030291)
 
 ## Vídeo
- [Apresentação Amanda e Arthur](https://youtu.be/dhSVdAhV2Cs)
+ [Apresentação Amanda e Arthur](https://youtu.be/ef7WdkGWxZ4)
 
 ## Funcionalidades
 
